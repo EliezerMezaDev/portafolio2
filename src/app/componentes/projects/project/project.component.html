@@ -1,0 +1,24 @@
+<article class="project">
+  <picture class="project__image">
+    <source [srcset]="project?.image + '.avif'" type="image/avif" />
+    <source [srcset]="project?.image + '.webp'" type="image/webp" />
+
+    <img [src]="project?.image + '.png'" [alt]="project?.label" />
+  </picture>
+
+  <div class="project__body">
+    <span class="project__label">
+      <h4>
+        {{ project?.label }}
+      </h4>
+    </span>
+
+    <p class="project__description">{{ project?.description }}</p>
+
+    <div class="project__skills">
+      <span *ngFor="let skill of project?.skills" class="skill">
+        {{ skill }}</span
+      >
+    </div>
+  </div>
+</article>

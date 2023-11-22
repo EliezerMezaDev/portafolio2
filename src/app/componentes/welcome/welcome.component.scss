@@ -1,0 +1,110 @@
+@import "/src/definitions.scss";
+
+.welcome {
+  @include center();
+
+  &__data {
+    h1,
+    h2,
+    p {
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: $s-title;
+    }
+
+    h2 {
+      position: relative;
+
+      padding-left: 4rem;
+
+      color: $c-text-o60;
+
+      font-size: $s-subtitle;
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        top: calc(50%);
+        left: 6px;
+
+        width: 3.25rem;
+        height: 2px;
+        background-color: $c-main-lite;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      
+      font-size: $s-font;
+      color: $c-text-o60;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+
+      border: 1px solid $c-main-lite;
+
+      transition: 0.3s;
+
+      @include center();
+
+      .icon {
+        width: 25px;
+        height: 25px;
+
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        // transform: scale(0.9);
+
+        background-color: $c-main-lite;
+      }
+    }
+  }
+
+  &__portraid {
+    width: 300px;
+    height: 300px;
+
+    margin-left: 3rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      border-radius: 1rem;
+
+      border: 1px solid $c-main-lite;
+
+      animation: portraidAnimate 15s ease infinite 2s;
+    }
+  }
+}
+
+@keyframes portraidAnimate {
+  0% {
+    border-radius: 1rem;
+  }
+  20% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  40% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  60% {
+    border-radius: 20% 70% 60% 40%/60% 30% 70% 40%;
+  }
+  80% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 1rem;
+  }
+}

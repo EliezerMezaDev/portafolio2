@@ -1,0 +1,12 @@
+@import "/src/definitions.scss";
+
+.projects {
+  &__wrapper {
+    width: 1400px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+  }
+}

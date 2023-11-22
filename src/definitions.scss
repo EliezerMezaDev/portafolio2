@@ -1,0 +1,96 @@
+//? ---- IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Sans:ital@0;1&display=swap");
+
+//? ---- CONST
+
+//> colors
+$c-main: #37266c;
+$c-main-o80: #37266ccc;
+$c-main-o60: #37266c99;
+$c-main-o40: #37266c66;
+$c-main-o20: #37266c33;
+
+$c-main-alt: #4e409e;
+$c-main-alt-o80: #4e409ecc;
+$c-main-alt-o60: #4e409e99;
+$c-main-alt-o40: #4e409e66;
+$c-main-alt-o20: #4e409e33;
+
+$c-main-dark: #352665;
+$c-main-dark-o80: #352665cc;
+$c-main-dark-o60: #35266599;
+$c-main-dark-o40: #35266566;
+$c-main-dark-o20: #35266533;
+
+$c-main-lite: #5e499e;
+$c-main-lite-o80: #5e499ecc;
+$c-main-lite-o60: #5e499e99;
+$c-main-lite-o40: #5e499e66;
+$c-main-lite-o20: #5e499e33;
+
+$c-text: #f5f5f5;
+$c-text-o80: #f5f5f5cc;
+$c-text-o60: #f5f5f599;
+$c-text-o40: #f5f5f566;
+$c-text-o20: #f5f5f533;
+
+//> fonts
+$f-titles: "Lato", sans-serif;
+$f-texts: "Noto Sans", sans-serif;
+
+//> sizes
+$s-title: 6rem;
+$s-subtitle: 3rem;
+$s-font: 1.1rem;
+$s-font-small: 0.85rem;
+
+//> functions & mixins
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//? ---- SETTINGS
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  outline: none;
+
+  font-family: sans-serif;
+
+  color: $c-text;
+  font-family: $f-texts;
+}
+
+body {
+  background: linear-gradient(45deg, $c-main, $c-main-alt);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $f-titles;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
