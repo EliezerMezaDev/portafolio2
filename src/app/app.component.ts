@@ -20,5 +20,11 @@ export class AppComponent {
         paragraph: 'Algunas empresar con las que he colaborado'
       },
     },
+    contact: {
+      header: {
+        title: 'Dejame un mensaje',
+        paragraph: 'O escribeme acerca de tu proyecto, te respondere en breves'
+      },
+    }
   };
 }

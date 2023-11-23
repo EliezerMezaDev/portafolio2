@@ -1,1 +1,98 @@
-<p>contact works!</p>
+<section class="contact">
+  <app-section-title [headerData]="sectionData?.header"></app-section-title>
+
+  <div class="contact__wrapper">
+    <div class="info">
+      <!-- href="https://api.whatsapp.com/send?phone=584122970632&text=!Hola!" -->
+      <div class="info__card whatsapp">
+        <img src="assets/logos/whatsapp.svg" alt="logo-whatsapp" class="icon" />
+
+        <h3 class="info__card-title">whatsapp</h3>
+        <span class="info__card-data">(+58) 412-297-0632</span>
+      </div>
+
+      <!-- href="mailto:eliezermeza.dev@gmail.com" -->
+      <div class="info__card mail">
+        <img src="assets/logos/mail.svg" alt="logo-whatsapp" class="icon" />
+
+        <h3 class="info__card-title">e-mail</h3>
+        <span class="info__card-data">eliezermeza.dev@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- ref={form} onSubmit={sendEmail} -->
+
+    <form class="form">
+      <div class="form__input">
+        <label>Nombre</label>
+        <input type="text" name="name" placeholder="..." autocomplete="off" />
+      </div>
+
+      <div class="form__input">
+        <label>Correo</label>
+        <input type="email" name="email" placeholder="..." autocomplete="off" />
+      </div>
+
+      <div class="form__input textarea">
+        <label>Proyecto</label>
+        <textarea
+          name="project"
+          placeholder="..."
+          autocomplete="off"
+        ></textarea>
+      </div>
+
+      <button class="form__button">
+        Enviar mensaje
+
+        <img src="assets/icons/send.svg" alt="icon-send" class="icon" />
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- <h2 className="section__title">Dejame un mensaje</h2>
+<span className="section__subtitle">Te respondere en breves</span>
+
+<div className="contact__container container grid">
+  <div className="contact__content">
+    <h3 className="contact__title">Contactame</h3>
+
+    <div className="contact__info">
+      <div className="contact__card">
+        <IoLogoWhatsapp className="contact__card-icon" />
+
+        <h3 className="contact__card-title">Whatsapp</h3>
+        <span className="contact__card-data">(+58)412-297-0632</span>
+
+        <a
+          href="https://api.whatsapp.com/send?phone=584122970632&text=!Hola!"
+          className="contact__button"
+        >
+          Escribeme
+          <AiOutlineArrowRight className="contact__button-icon" />
+        </a>
+      </div>
+
+      <div className="contact__card">
+        <MdOutgoingMail className="contact__card-icon" />
+
+        <h3 className="contact__card-title">E-mail</h3>
+        <span className="contact__card-data">eameza1302@gmail.com</span>
+
+        <a href="mailto:eameza1302@gmail.com" className="contact__button">
+          Escribeme
+          <AiOutlineArrowRight className="contact__button-icon" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="contact__content">
+    <h3 className="contact__title">o escribeme sobre tu proyecto</h3>
+
+   
+  </div>
+</div>
+
+<Toast _state={toastState} _title="Mensaje enviado" /> -->

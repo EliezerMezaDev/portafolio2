@@ -38,7 +38,7 @@
 
     p {
       margin-top: 1rem;
-      
+
       font-size: $s-font;
       color: $c-text-o60;
     }
@@ -48,7 +48,7 @@
       padding: 0.5rem 1rem;
       border-radius: 1rem;
 
-      border: 1px solid $c-main-lite;
+      border: 2px solid $c-main-lite;
 
       transition: 0.3s;
 
@@ -62,9 +62,10 @@
       }
 
       &:hover {
-        // transform: scale(0.9);
+        border-color: $c-mark;
+        background-color: $c-mark;
 
-        background-color: $c-main-lite;
+        transform: translateY(-10px);
       }
     }
   }
@@ -81,7 +82,7 @@
 
       border-radius: 1rem;
 
-      border: 1px solid $c-main-lite;
+      border: 2px solid $c-main-lite;
 
       animation: portraidAnimate 15s ease infinite 2s;
     }

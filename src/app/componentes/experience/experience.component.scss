@@ -1,0 +1,88 @@
+@import "/src/definitions.scss";
+
+.experience__wrapper {
+  display: flex;
+
+  height: 400px;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+
+  .job {
+    padding: 0 1.5rem;
+    height: 50px;
+
+    border-left: 3px solid $c-main-alt;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    &.current {
+      background-color: $c-main;
+
+      border-color: $c-mark;
+    }
+
+    &:hover {
+      background-color: $c-main;
+    }
+  }
+}
+
+.jobCurrent {
+  width: 700px;
+  padding: 0 1rem;
+
+  &__head {
+    height: 50px;
+    font-size: 1.5rem;
+
+    white-space: pre;
+
+    display: flex;
+    align-items: center;
+
+    a {
+      font-weight: 600;
+      color: $c-mark;
+
+      transition: 0.3s;
+
+    }
+  }
+
+  &__timelapse {
+    font-size: $s-font-small;
+
+    margin: -5px 0 1rem 5px;
+
+    color: $c-text-o60;
+  }
+
+  &__performance {
+    li {
+      position: relative;
+      padding-left: 2.5rem;
+
+      margin-bottom: 1rem;
+
+      font-size: $s-font;
+      text-align: justify;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0;
+
+        padding: .05rem 0;
+        width: 2rem;
+        background-color: $c-main-lite;
+      }
+    }
+  }
+}

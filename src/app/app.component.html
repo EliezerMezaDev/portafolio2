@@ -1,10 +1,11 @@
 <div class="container-all">
-
   <app-navigation></app-navigation>
 
   <main class="sectionsWrapper" id="sectionsWrapper">
     <app-welcome id="welcome" class="section welcome" />
+
     <app-about-me id="aboutMe" class="section aboutMe" />
+
     <app-experience
       id="experience"
       class="section experience"
@@ -17,17 +18,22 @@
       [sectionData]="app_data.projects"
     />
 
-    <app-contact id="contact" class="section contact" />
+    <app-contact
+      id="contact"
+      class="section contact"
+      [sectionData]="app_data.contact"
+    />
+    
   </main>
 
-  <aside class="floating socialbar">
+  <!-- <aside class="floating socialbar">
     <a href="#"
       ><img src="assets/logos/github.svg" alt="logo-github" class="icon"
     /></a>
     <a href="#"
       ><img src="assets/logos/linkedin.svg" alt="logo-linkedin" class="icon" />
     </a>
-  </aside>
+  </aside> -->
 
   <aside class="floating email">
     <div class="floatingWrapper">

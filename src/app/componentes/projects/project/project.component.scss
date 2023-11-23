@@ -29,8 +29,9 @@
 
       width: 100%;
       height: 100%;
+      border-radius: 0.5rem;
 
-      background-color: $c-main-dark-o80;
+      background-color: $c-mark-o20;
 
       transition: 0.3s;
 
@@ -75,7 +76,9 @@
       padding: 0.35rem 0.75rem;
 
       border-radius: 1rem;
-      border: 1px solid $c-main-lite;
+      //border: 2px solid $c-mark-o20;
+
+      background-color: $c-main-lite;
 
       font-size: $s-font-small;
     }

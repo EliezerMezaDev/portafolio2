@@ -22,11 +22,17 @@ $c-main-dark-o60: #35266599;
 $c-main-dark-o40: #35266566;
 $c-main-dark-o20: #35266533;
 
-$c-main-lite: #5e499e;
-$c-main-lite-o80: #5e499ecc;
-$c-main-lite-o60: #5e499e99;
-$c-main-lite-o40: #5e499e66;
-$c-main-lite-o20: #5e499e33;
+$c-main-lite: #735cb9;
+$c-main-lite-o80: #735cb9cc;
+$c-main-lite-o60: #735cb999;
+$c-main-lite-o40: #735cb966;
+$c-main-lite-o20: #735cb933;
+
+$c-mark: #ee2fa2;
+$c-mark-o80: #ee2fa2cc;
+$c-mark-o60: #ee2fa299;
+$c-mark-o40: #ee2fa266;
+$c-mark-o20: #ee2fa233;
 
 $c-text: #f5f5f5;
 $c-text-o80: #f5f5f5cc;
@@ -40,7 +46,7 @@ $f-texts: "Noto Sans", sans-serif;
 
 //> sizes
 $s-title: 6rem;
-$s-subtitle: 3rem;
+$s-subtitle: 2.5rem;
 $s-font: 1.1rem;
 $s-font-small: 0.85rem;
 
@@ -66,7 +72,7 @@ $s-font-small: 0.85rem;
 }
 
 body {
-  background: linear-gradient(45deg, $c-main, $c-main-alt);
+  background: linear-gradient(45deg, $c-main, $c-main-dark);
 }
 
 h1,
@@ -93,4 +99,9 @@ ul,
 li,
 ol {
   list-style: none;
+}
+
+input,
+textarea {
+  border: none;
 }
