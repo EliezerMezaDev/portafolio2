@@ -64,8 +64,8 @@
 
       &.mail {
         &:hover {
-          border-color: #DB4437;
-          background-color: #DB4437;
+          border-color: #db4437;
+          background-color: #db4437;
         }
       }
     }
@@ -82,19 +82,6 @@
       border: 2px solid $c-main-lite;
 
       border-radius: 0.75rem;
-
-      label {
-        position: absolute;
-        top: -0.9rem;
-        left: 1.25rem;
-
-        padding: 0.25rem;
-        background-color: $c-main-dark;
-
-        font-size: $s-font-small;
-
-        z-index: 10;
-      }
 
       input,
       textarea {
@@ -113,7 +100,7 @@
         transition: 0.3s;
 
         &::placeholder {
-          color: $c-main-lite;
+          color: $c-text-o60;
         }
       }
 
@@ -137,7 +124,7 @@
 
       border: 2px solid $c-main-lite;
 
-      background-color: $c-main;
+      background-color: transparent;
 
       transition: 0.3s;
 

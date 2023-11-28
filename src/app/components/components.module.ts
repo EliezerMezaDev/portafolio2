@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from '../components/welcome/welcome.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { SectionTitleComponent } from './section-title/section-title.component';
+import { SectionTitleComponent } from '../components/section-title/section-title.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
@@ -32,4 +32,4 @@ import { NavigationComponent } from './navigation/navigation.component';
     NavigationComponent,
   ],
 })
-export class ComponentesModule {}
+export class ComponentsModule {}

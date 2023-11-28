@@ -9,17 +9,40 @@
   &.socialbar {
     right: 0;
 
+    padding-bottom: 7.5rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    a {
-      margin-bottom: 1rem;
+    &::before {
+      content: "";
+      position: absolute;
 
+      bottom: 0;
+
+      height: 7.5rem;
+      width: 2px;
+
+      background-color: $c-main-lite;
+    }
+
+    a {
+      padding: 0.25rem 0.25rem 0.5rem 0.25rem;
       transition: 0.3s;
+
+      i {
+        color: $c-main-lite;
+        
+        transition: 0.3s;
+      }
 
       &:hover {
         transform: translateY(-10px);
+
+        i {
+          color: $c-mark;
+        }
       }
     }
   }
@@ -28,7 +51,7 @@
     bottom: 0;
     left: 0;
 
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
 
     .floatingWrapper {
       position: relative;
@@ -38,11 +61,11 @@
       &::before {
         content: "";
         position: absolute;
-        bottom: calc(50%);
-        left: -6.5rem;
+        bottom: 10px;
+        left: -8.5rem;
 
         height: 2px;
-        width: 5rem;
+        width: 7.5rem;
         background-color: $c-main-lite;
       }
 

@@ -2,16 +2,14 @@
   <app-navigation />
 
   <main class="sectionsWrapper" id="sectionsWrapper">
+    <app-welcome id="welcome" class="section welcome" />
+
     <app-about-me
       id="aboutMe"
       class="section aboutMe"
       [sectionData]="app_data.aboutMe"
     />
 
-    
-    <app-welcome id="welcome" class="section welcome" />
-
-    
     <app-experience
       id="experience"
       class="section experience"
@@ -29,16 +27,18 @@
       class="section contact"
       [sectionData]="app_data.contact"
     />
+
+    <app-footer />
   </main>
 
-  <!-- <aside class="floating socialbar">
-    <a href="#"
-      ><img src="assets/logos/github.svg" alt="logo-github" class="icon"
-    /></a>
-    <a href="#"
-      ><img src="assets/logos/linkedin.svg" alt="logo-linkedin" class="icon" />
+  <aside class="floating socialbar">
+    <a href="#">
+      <i class="ri-github-fill icon"></i>
     </a>
-  </aside> -->
+    <a href="#">
+      <i class="ri-linkedin-box-fill icon"></i>
+    </a>
+  </aside>
 
   <aside class="floating email">
     <div class="floatingWrapper">

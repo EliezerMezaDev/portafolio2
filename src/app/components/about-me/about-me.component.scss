@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 400px 1fr;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
 
   .meWrapper {
     position: relative;
@@ -64,6 +64,39 @@
 
       &::after {
         animation-play-state: paused;
+      }
+    }
+  }
+
+  .description {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .skills {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      position: relative;
+      padding-left: 2.5rem;
+
+      margin-bottom: 1rem;
+
+      font-size: $s-font;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0;
+
+        padding: 0.05rem 0;
+        width: 2rem;
+        background-color: $c-main-lite;
       }
     }
   }
