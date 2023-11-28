@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public app_data = {
+    aboutMe: {
+      header: {
+        title: 'Sobre mi',
+      },
+    },
+
     projects: {
       header: {
         title: 'Mis proyectos',
@@ -17,14 +23,14 @@ export class AppComponent {
     experience: {
       header: {
         title: 'Mi experiencia',
-        paragraph: 'Algunas empresar con las que he colaborado'
+        paragraph: 'Algunas empresar con las que he colaborado',
       },
     },
     contact: {
       header: {
         title: 'Dejame un mensaje',
-        paragraph: 'O escribeme acerca de tu proyecto, te respondere en breves'
+        paragraph: 'O escribeme acerca de tu proyecto, te respondere en breves',
       },
-    }
+    },
   };
 }

@@ -1,1 +1,49 @@
-<p>about-me works!</p>
+<section class="aboutMe">
+  <app-section-title [headerData]="sectionData?.header" />
+
+  <div class="aboutMe__wrapper">
+    <div class="col">
+      <div class="meWrapper">
+        <picture class="me">
+          <!-- 
+            (mouseenter)="hoverMe('enter')"
+        (mouseleave)="hoverMe('leave')"
+        id="pictureMe"
+       -->
+          <source srcset="assets/image/me.avif" type="image/avif" />
+          <source srcset="assets/image/me.webp" type="image/webp" />
+          <img src="assets/image/me.jpg" alt="me.jpg" />
+        </picture>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tempore
+          sapiente quasi culpa ut sequi distinctio facere quibusdam laudantium
+          maiores.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro debitis
+          odio rem illo rerum nam et reiciendis! Eligendi eum consequuntur eos
+          ab nulla non? Quasi quia, architecto harum repellat ipsa quam quis
+          nemo commodi quos.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius culpa
+          vitae possimus reiciendis voluptates perferendis.
+        </p>
+      </div>
+
+      <ul class="skills">
+        <li>Angular</li>
+        <li>React</li>
+        <li>Ionic</li>
+        <li>SASS</li>
+        <li>JavaScript (ES6+)</li>
+      </ul>
+    </div>
+  </div>
+</section>

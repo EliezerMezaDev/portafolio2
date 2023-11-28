@@ -1,11 +1,17 @@
 <div class="container-all">
-  <app-navigation></app-navigation>
+  <app-navigation />
 
   <main class="sectionsWrapper" id="sectionsWrapper">
+    <app-about-me
+      id="aboutMe"
+      class="section aboutMe"
+      [sectionData]="app_data.aboutMe"
+    />
+
+    
     <app-welcome id="welcome" class="section welcome" />
 
-    <app-about-me id="aboutMe" class="section aboutMe" />
-
+    
     <app-experience
       id="experience"
       class="section experience"
@@ -23,7 +29,6 @@
       class="section contact"
       [sectionData]="app_data.contact"
     />
-    
   </main>
 
   <!-- <aside class="floating socialbar">
