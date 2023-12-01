@@ -14,27 +14,14 @@ export class ExperienceComponent {
       timelapse: '2021 - Presente',
       url: 'https://www.grupospartan.com/',
       label: 'Grupo Spartan S.A.',
-
       rol: 'Desarrollador de Software',
-
       performance: [
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus deleniti ipsam vitae ex incidunt a, dolorem, itaque, velit consequuntur labore ea doloribus illum! Labore quo aliquid quibusdam dolorum, reprehenderit adipisci.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quidem? ashdbfkabd aksdfb kasdbf habsdfh ba',
-        'askjdfajkndfkj ansdfjk nasjk fnaf',
+        'Realizo análisis de requerimientos y propongo estrategias para enfocar proyectos.',
+        'Diseño y Desarrollo aplicaciones de gestión de recursos con funcionalidades de control de inventario, manejo de órdenes de compra/venta, análisis de costos y gastos, gestión de empleados, gestión de procesos.',
+        'Optimizo componentes hechos en Ionic/Angular para múltiples proyectos.',
+        'Presto apoyo a otros equipos en funciones de Frontend y Backend.',
       ],
       skills: ['Ionic', 'Angular', 'React', 'TypeScript', 'JavaScript'],
-    },
-
-    {
-      timelapse: '2019 - 2021',
-      url: '#',
-      label: 'BeeLetters C.A.',
-
-      rol: 'Desarrollador Frontent',
-
-      performance: ['asndfan3n ajn23j an j3', 'asdkfp asdfm adnsf '],
-
-      skills: ['Wordpress', 'CSS'],
     },
   ];
 

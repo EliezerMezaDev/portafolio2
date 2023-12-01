@@ -1,4 +1,4 @@
-<article class="project">
+<article class="project" (click)="navigate(project?.url)" >
   <picture class="project__image">
     <source [srcset]="project?.image + '.avif'" type="image/avif" />
     <source [srcset]="project?.image + '.webp'" type="image/webp" />

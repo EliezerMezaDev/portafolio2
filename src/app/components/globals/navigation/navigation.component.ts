@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-  public openMenu = true;
+  public openMenu = false;
 
   private activeScroll: number = 0;
 
