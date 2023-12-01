@@ -33,7 +33,7 @@
 
       i {
         color: $c-main-lite;
-        
+
         transition: 0.3s;
       }
 
@@ -84,6 +84,10 @@
         }
       }
     }
+  }
+
+  @include responsiveSize(1200px) {
+    display: none !important;
   }
 }
 

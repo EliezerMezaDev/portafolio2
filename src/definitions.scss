@@ -63,6 +63,37 @@ $s-font-small: 0.85rem;
   align-items: center;
 }
 
+//>
+@mixin responsiveSize($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin responsive1024px() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsive768px() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive425px() {
+  @media only screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin responsive320px() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
 //? ---- SETTINGS
 * {
   margin: 0;
@@ -85,12 +116,20 @@ body {
   background-color: hsla(264, 96%, 10%, 1);
   background-image: radial-gradient(at 27% 81%, $c-main, transparent 50%),
     radial-gradient(at 3% 10%, $c-main-alt, transparent 50%),
-    radial-gradient(at 7% 77%, $c-main-dark, transparent 50%),
     radial-gradient(at 0% 78%, $c-main-lite 0px, transparent 50%),
-    radial-gradient(at 52% 42%, $c-mark-alt 0px, transparent 50%);
+    radial-gradient(at 7% 77%, $c-main-dark, transparent 50%),
+    radial-gradient(at 52% 42%, $c-main-alt 0px, transparent 50%);
   background-size: 200% 200%, 150% 150%, 225% 225%, 200% 200%, 150% 150%,
     225% 225%, 200% 200%;
   animation: animatedBackground 40s linear infinite;
+
+  @include responsiveSize(1024px) {
+    background-image: radial-gradient(at 27% 81%, $c-main, transparent 50%),
+      radial-gradient(at 3% 10%, $c-main-alt, transparent 50%),
+      radial-gradient(at 0% 78%, $c-main-lite 0px, transparent 50%),
+      radial-gradient(at 7% 77%, $c-main-dark, transparent 50%),
+      radial-gradient(at 52% 42%, $c-main-alt 0px, transparent 50%);
+  }
 }
 
 @keyframes animatedBackground {

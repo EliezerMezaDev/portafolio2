@@ -1,12 +1,24 @@
 @import "/src/definitions.scss";
 
 .experience__wrapper {
+  height: 400px;
+  padding: 0 1rem;
+
   display: flex;
 
-  height: 400px;
+  @include responsiveSize(950px) {
+    height: auto;
+
+    flex-direction: column;
+  }
 }
 
+// @include responsiveSize(650px) {
+//   max-width: min(400px, 90%);
+// }
+
 .jobList {
+  min-width: 220px;
   display: flex;
   flex-direction: column;
 
@@ -37,6 +49,10 @@
   width: 700px;
   padding: 0 1rem;
 
+  @include responsiveSize(950px) {
+    width: auto;
+  }
+
   &__head {
     height: 50px;
     font-size: 1.5rem;
@@ -45,6 +61,16 @@
 
     display: flex;
     align-items: center;
+
+    @include responsiveSize(950px) {
+      height: auto;
+      padding: 1rem 0;
+      //flex-direction: column;
+    }
+
+    @include responsiveSize(600px) {
+      flex-direction: column;
+    }
 
     a {
       font-weight: 600;
@@ -58,6 +84,10 @@
     font-size: $s-font-small;
 
     margin: -5px 0 1rem 5px;
+
+    @include responsiveSize(950px) {
+      margin: 0;
+    }
 
     color: $c-text-o60;
   }

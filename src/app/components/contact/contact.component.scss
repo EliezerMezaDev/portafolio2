@@ -5,12 +5,30 @@
     width: 1200px;
     height: 600px;
 
+    @include responsiveSize(724px) {
+      height: auto;
+    }
+
     padding-bottom: 3rem;
 
     display: grid;
     grid-template-columns: repeat(2, max-content);
     column-gap: 6rem;
     justify-content: center;
+
+    @include responsiveSize(1020px) {
+      column-gap: 2rem;
+    }
+
+    @include responsiveSize(724px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .info {
+        display: none;
+      }
+    }
   }
 
   .info {
@@ -19,9 +37,13 @@
       padding: 2rem;
       margin-bottom: 2rem;
       border-radius: 0.75rem;
+      border: 2px solid $c-main-lite;
+
+      @include responsiveSize(1020px) {
+        width: 300px;
+      }
 
       //background-color: $c-mark;
-      border: 2px solid $c-main-lite;
 
       text-align: center;
 

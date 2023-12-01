@@ -14,19 +14,19 @@
     </ol>
 
     <article class="jobCurrent">
-      <h4 class="jobCurrent__head">
-        {{ jobCurrent.rol }}
+      <span class="jobCurrent__head">
+        <h4>{{ jobCurrent.rol }}</h4>
+
         <a [href]="jobCurrent.url">@{{ jobCurrent.label }}</a>
-      </h4>
+      </span>
 
       <p class="jobCurrent__timelapse">{{ jobCurrent.timelapse }}</p>
 
       <ul class="jobCurrent__performance">
-        <li *ngFor="let performance of jobCurrent.performance"> {{ performance }}</li>
+        <li *ngFor="let performance of jobCurrent.performance">
+          {{ performance }}
+        </li>
       </ul>
-
-      
-
     </article>
   </div>
 </section>

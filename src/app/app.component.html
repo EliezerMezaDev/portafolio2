@@ -4,29 +4,16 @@
   <main class="sectionsWrapper" id="sectionsWrapper">
     <app-welcome id="welcome" class="section welcome" />
 
-    <app-about-me
-      id="aboutMe"
-      class="section aboutMe"
-      [sectionData]="app_data.aboutMe"
-    />
+    <app-about-me class="section aboutMe" [sectionData]="app_data.aboutMe" />
 
     <app-experience
-      id="experience"
       class="section experience"
       [sectionData]="app_data.experience"
     />
 
-    <app-projects
-      id="projects"
-      class="section projects"
-      [sectionData]="app_data.projects"
-    />
+    <app-projects class="section projects" [sectionData]="app_data.projects" />
 
-    <app-contact
-      id="contact"
-      class="section contact"
-      [sectionData]="app_data.contact"
-    />
+    <app-contact class="section contact" [sectionData]="app_data.contact" />
 
     <app-footer />
   </main>

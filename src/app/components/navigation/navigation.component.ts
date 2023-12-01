@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
+  public openMenu = true;
+
+  private activeScroll: number = 0;
+
   constructor() {
     document.addEventListener('mousemove', (e) => {
-      const navigationBar = document.querySelector('.navigation');
+      const headerBar = document.querySelector('.header');
       const positionY = e.pageY;
 
       const currentScroll = Number(
@@ -16,15 +20,15 @@ export class NavigationComponent {
       );
 
       if (currentScroll == 0) {
-        navigationBar?.classList.add('showNavigation');
+        headerBar?.classList.add('showNavigation');
 
         return;
       }
 
       if (positionY < 100) {
-        navigationBar?.classList.add('showNavigation');
+        headerBar?.classList.add('showNavigation');
       } else {
-        navigationBar?.classList.remove('showNavigation');
+        headerBar?.classList.remove('showNavigation');
       }
     });
 
@@ -32,18 +36,26 @@ export class NavigationComponent {
       document
         .querySelector('.sectionsWrapper')
         ?.addEventListener('scroll', (e) => {
-          const navigationBar = document.querySelector('.navigation');
+          const headerBar = document.querySelector('.header');
 
           const currentScroll = Number(
             document.getElementById('sectionsWrapper')?.scrollTop
           );
 
-          if (currentScroll < 100) {
-            navigationBar?.classList.add('showNavigation');
+          if (currentScroll < 100 || this.activeScroll > currentScroll) {
+            headerBar?.classList.add('showNavigation');
           } else {
-            navigationBar?.classList.remove('showNavigation');
+            headerBar?.classList.remove('showNavigation');
           }
+
+          this.activeScroll = currentScroll;
         });
+
+      document.querySelectorAll('li[nList]').forEach((e) => {
+        e.addEventListener('click', () => {
+          this.openMenu = false;
+        });
+      });
     }, 10);
   }
 }

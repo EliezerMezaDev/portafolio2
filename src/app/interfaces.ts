@@ -16,6 +16,7 @@ export interface sectionData {
 }
 
 export interface headerData {
+  htmlId: string;
   title: string;
   paragraph?: string;
 }
