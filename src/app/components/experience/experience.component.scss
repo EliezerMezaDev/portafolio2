@@ -1,0 +1,116 @@
+@import "/src/definitions.scss";
+
+.experience__wrapper {
+  height: 400px;
+  padding: 0 1rem;
+
+  display: flex;
+
+  @include responsiveSize(950px) {
+    height: auto;
+
+    flex-direction: column;
+  }
+}
+
+// @include responsiveSize(650px) {
+//   max-width: min(400px, 90%);
+// }
+
+.jobList {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+
+  .job {
+    padding: 0 1.5rem;
+    height: 50px;
+
+    border-left: 3px solid $c-main-alt;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    &.current {
+      background-color: $c-main-o40;
+
+      border-color: $c-mark;
+    }
+
+    &:hover {
+      background-color: $c-main-o20;
+    }
+  }
+}
+
+.jobCurrent {
+  width: 700px;
+  padding: 0 1rem;
+
+  @include responsiveSize(950px) {
+    width: auto;
+  }
+
+  &__head {
+    height: 50px;
+    font-size: 1.5rem;
+
+    white-space: pre;
+
+    display: flex;
+    align-items: center;
+
+    @include responsiveSize(950px) {
+      height: auto;
+      padding: 1rem 0;
+      //flex-direction: column;
+    }
+
+    @include responsiveSize(600px) {
+      flex-direction: column;
+    }
+
+    a {
+      font-weight: 600;
+      color: $c-mark;
+
+      transition: 0.3s;
+    }
+  }
+
+  &__timelapse {
+    font-size: $s-font-small;
+
+    margin: -5px 0 1rem 5px;
+
+    @include responsiveSize(950px) {
+      margin: 0;
+    }
+
+    color: $c-text-o60;
+  }
+
+  &__performance {
+    li {
+      position: relative;
+      padding-left: 2.5rem;
+
+      margin-bottom: 1rem;
+
+      font-size: $s-font;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0;
+
+        padding: 0.05rem 0;
+        width: 2rem;
+        background-color: $c-main-lite;
+      }
+    }
+  }
+}

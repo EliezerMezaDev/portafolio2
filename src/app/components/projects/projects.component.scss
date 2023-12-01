@@ -1,0 +1,24 @@
+@import "/src/definitions.scss";
+
+.projects {
+  &__wrapper {
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+
+    @include responsiveSize(1300px) {
+      //width: calc(100% - 100px);
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsiveSize(940px) {
+      //width: calc(100% - 100px);
+
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "./definitions.scss";
+
+//? ---- GENERALS
+.container-all {
+  position: relative;
+
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+
+  .sectionsWrapper {
+    
+  scroll-behavior: smooth;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
+.section {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  @include center();
+
+  &__title {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    margin-bottom: 5rem !important;
+
+    text-align: center;
+
+    @include responsiveSize(650px) {
+      max-width: 400px;
+      margin: 0 auto 0 auto !important;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: $s-subtitle;
+
+      @include responsiveSize(650px) {
+        font-size: 2rem;
+      }
+    }
+
+    p,
+    a {
+      font-size: $s-font;
+      color: $c-text-o60;
+    }
+  }
+
+  &.welcome {
+    position: relative;
+  }
+
+  &.aboutMe {
+    @include responsiveSize(650px) {
+      min-height: 120vh;
+    }
+  }
+
+  &.contact {
+    @include responsiveSize(724px) {
+      .section__title {
+        margin-bottom: 1rem !important;
+      }
+    }
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  color: $c-text;
+}

@@ -1,0 +1,7 @@
+<section class="projects">
+  <app-section-title [headerData]="sectionData?.header"></app-section-title>
+
+  <div class="projects__wrapper">
+    <app-project *ngFor="let project of projects" [project]="project" />
+  </div>
+</section>

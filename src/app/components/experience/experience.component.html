@@ -1,0 +1,32 @@
+<section class="experience">
+  <app-section-title [headerData]="sectionData?.header" />
+
+  <div class="experience__wrapper">
+    <ol class="jobList">
+      <li
+        *ngFor="let job of jobList"
+        class="job"
+        [ngClass]="{ current: job.label === jobCurrent.label }"
+        (click)="jobCurrent = job"
+      >
+        {{ job.label }}
+      </li>
+    </ol>
+
+    <article class="jobCurrent">
+      <span class="jobCurrent__head">
+        <h4>{{ jobCurrent.rol }}</h4>
+
+        <a [href]="jobCurrent.url">@{{ jobCurrent.label }}</a>
+      </span>
+
+      <p class="jobCurrent__timelapse">{{ jobCurrent.timelapse }}</p>
+
+      <ul class="jobCurrent__performance">
+        <li *ngFor="let performance of jobCurrent.performance">
+          {{ performance }}
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>

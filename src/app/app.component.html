@@ -1,0 +1,35 @@
+<div class="container-all">
+  <app-navigation />
+
+  <main class="sectionsWrapper" id="sectionsWrapper">
+    <app-welcome id="welcome" class="section welcome" />
+
+    <app-about-me class="section aboutMe" [sectionData]="app_data.aboutMe" />
+
+    <app-experience
+      class="section experience"
+      [sectionData]="app_data.experience"
+    />
+
+    <app-projects class="section projects" [sectionData]="app_data.projects" />
+
+    <app-contact class="section contact" [sectionData]="app_data.contact" />
+
+    <app-footer />
+  </main>
+
+  <aside class="floating socialbar">
+    <a href="#">
+      <i class="ri-github-fill icon"></i>
+    </a>
+    <a href="#">
+      <i class="ri-linkedin-box-fill icon"></i>
+    </a>
+  </aside>
+
+  <aside class="floating email">
+    <div class="floatingWrapper">
+      <a href="#">eliezermeze.dev@gmail.com</a>
+    </div>
+  </aside>
+</div>

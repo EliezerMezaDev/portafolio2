@@ -1,0 +1,180 @@
+//? ---- IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Sans:ital@0;1&display=swap");
+
+//? ---- CONST
+
+//> colors
+$c-main: #37266c;
+$c-main-o80: #37266ccc;
+$c-main-o60: #37266c99;
+$c-main-o40: #37266c66;
+$c-main-o20: #37266c33;
+
+$c-main-alt: #4e409e;
+$c-main-alt-o80: #4e409ecc;
+$c-main-alt-o60: #4e409e99;
+$c-main-alt-o40: #4e409e66;
+$c-main-alt-o20: #4e409e33;
+
+$c-main-dark: #352665;
+$c-main-dark-o80: #352665cc;
+$c-main-dark-o60: #35266599;
+$c-main-dark-o40: #35266566;
+$c-main-dark-o20: #35266533;
+
+$c-main-lite: #735cb9;
+$c-main-lite-o80: #735cb9cc;
+$c-main-lite-o60: #735cb999;
+$c-main-lite-o40: #735cb966;
+$c-main-lite-o20: #735cb933;
+
+$c-mark: #ee2fa2;
+$c-mark-o80: #ee2fa2cc;
+$c-mark-o60: #ee2fa299;
+$c-mark-o40: #ee2fa266;
+$c-mark-o20: #ee2fa233;
+
+$c-mark-alt: #c43faa;
+$c-mark-alt-o80: #c43faacc;
+$c-mark-alt-o60: #c43faa99;
+$c-mark-alt-o40: #c43faa66;
+$c-mark-alt-o20: #c43faa33;
+
+$c-text: #f5f5f5;
+$c-text-o80: #f5f5f5cc;
+$c-text-o60: #f5f5f599;
+$c-text-o40: #f5f5f566;
+$c-text-o20: #f5f5f533;
+
+//> fonts
+$f-titles: "Lato", sans-serif;
+$f-texts: "Noto Sans", sans-serif;
+
+//> sizes
+$s-title: 6rem;
+$s-subtitle: 2.5rem;
+$s-font: 1.1rem;
+$s-font-small: 0.85rem;
+
+//> functions & mixins
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//>
+@mixin responsiveSize($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin responsive1024px() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsive768px() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive425px() {
+  @media only screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin responsive320px() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+//? ---- SETTINGS
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  outline: none;
+
+  font-family: sans-serif;
+
+  color: $c-text;
+  font-family: $f-texts;
+}
+
+body {
+  //background: linear-gradient(45deg, $c-main, $c-main-dark);
+
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(264, 96%, 10%, 1);
+  background-image: radial-gradient(at 27% 81%, $c-main, transparent 50%),
+    radial-gradient(at 3% 10%, $c-main-alt, transparent 50%),
+    radial-gradient(at 0% 78%, $c-main-lite 0px, transparent 50%),
+    radial-gradient(at 7% 77%, $c-main-dark, transparent 50%),
+    radial-gradient(at 52% 42%, $c-main-alt 0px, transparent 50%);
+  background-size: 200% 200%, 150% 150%, 225% 225%, 200% 200%, 150% 150%,
+    225% 225%, 200% 200%;
+  animation: animatedBackground 40s linear infinite;
+
+  @include responsiveSize(1024px) {
+    background-image: radial-gradient(at 27% 81%, $c-main, transparent 50%),
+      radial-gradient(at 3% 10%, $c-main-alt, transparent 50%),
+      radial-gradient(at 0% 78%, $c-main-lite 0px, transparent 50%),
+      radial-gradient(at 7% 77%, $c-main-dark, transparent 50%),
+      radial-gradient(at 52% 42%, $c-main-alt 0px, transparent 50%);
+  }
+}
+
+@keyframes animatedBackground {
+  0%,
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+    background-size: 200% 200%, 150% 150%, 225% 225%;
+  }
+  33% {
+    background-position: 50% 100%, 0% 50%, 100% 50%;
+    background-size: 225% 225%, 200% 200%, 150% 150%;
+  }
+  66% {
+    background-position: 100% 50%, 50% 0%, 0% 50%;
+    background-size: 150% 150%, 225% 225%, 200% 200%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $f-titles;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+input,
+textarea {
+  border: none;
+}
