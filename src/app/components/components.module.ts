@@ -1,35 +1,48 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { WelcomeComponent } from '../components/welcome/welcome.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { SectionTitleComponent } from '../components/section-title/section-title.component';
-import { ProjectComponent } from './projects/project/project.component';
-import { NavigationComponent } from './navigation/navigation.component';
+//>==== GLOBALS
+import { NavigationComponent } from './globals/navigation/navigation.component';
+
+//>==== SECTIONS
+import { WelcomeComponent } from './sections/welcome/welcome.component';
+import { AboutMeComponent } from './sections/about-me/about-me.component';
+import { ExperienceComponent } from './sections/experience/experience.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
+import { ProjectComponent } from './sections/projects/project/project.component';
+import { ContactComponent } from './sections/contact/contact.component';
+
+//>==== OTHERS
+import { SectionTitleComponent } from './others/section-title/section-title.component';
+import { FooterComponent } from './globals/footer/footer.component';
 
 @NgModule({
   imports: [CommonModule],
   declarations: [
+    NavigationComponent,
+    FooterComponent,
+
     WelcomeComponent,
     AboutMeComponent,
     ExperienceComponent,
     ProjectsComponent,
-    ContactComponent,
-    SectionTitleComponent,
     ProjectComponent,
-    NavigationComponent,
+    ContactComponent,
+
+    SectionTitleComponent,
   ],
   exports: [
+    NavigationComponent,
+    FooterComponent,
+
     WelcomeComponent,
     AboutMeComponent,
     ExperienceComponent,
     ProjectsComponent,
+    ProjectComponent,
     ContactComponent,
+
     SectionTitleComponent,
-    NavigationComponent,
   ],
 })
 export class ComponentsModule {}
